@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .main-div {
+            background-color: lightyellow;
+            margin-left: 250px;
+            margin-right: 250px;
+            margin-top: 80px;
+            border: 5px solid blue;
+            border-radius: 25px;
+        }
+
+        .table-style {
+            padding-top: 10px;
+            padding-left: 100px;
+            padding-bottom: 25px;
+        }
+
+        .banner-style {
+            padding-left: 10px;
+            padding-top: 10px
+        }
+
+        body {
+            background: url("images/page_bg.jpg");
+            font-family: Verdana;
+            font-size: large;
+        }
+
+        input {
+            font-family: Verdana;
+            font-size: large;
+        }
+
+        .sub-button {
+            width: 100px;
+            height: 30px;
+            background-color: sandybrown;
+        }
+
+        .age-style {
+            width: 155px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <img src="images/join-banner.png" class="banner-style" />
+        <form>
+            <table class="table-style">
+                <tr>
+                    <td><Label for="empname">Enter Your Name</Label></td>
+                    <td>
+                        <input type="text" id="empname" name="empname"
+                               placeholder="Enter Name" required pattern="^[A-Z]{3,20}$" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Select Gender </label> </td>
+                    <td>
+                        <input type="radio" id="female" name="gender" required />
+                        <label for="female">Female</label>
+                        <input type="radio" id="male" name="gender" />
+                        <label for="male">Male</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="city">Select Nearest City</label></td>
+                    <td>
+                        <select id="city" name="city" required class="age-style">
+                            <option value="">Select City</option>
+                            <option value="1">Delhi</option>
+                            <option value="2">Mumbai</option>
+                            <option value="3">Kolkata</option>
+                            <option value="4">Chennai</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Select your Stream</label></td>
+                    <td>
+                        <input type="checkbox" id="java" name="stream" />
+                        <label for="java">Java</label>
+                        <input type="checkbox" id="dotnet" name="stream" />
+                        <label for="dotnet">Dotnet</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Select your Date of Join</label></td>
+                    <td>
+                        <input type="date" min="2005-01-01" max="2020-12-31" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Enter your Age</label></td>
+                    <td>
+                        <input type="number" min="18" max="50" class="age-style" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Select your Highest Degree</label></td>
+                    <td>
+                        <input list="degree" required />
+                        <datalist id="degree">
+                            <option>BCA</option>
+                            <option>MCA</option>
+                            <option>BTech</option>
+                            <option>MTech</option>
+                        </datalist>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="pwd">Enter password</label></td>
+                    <td>
+                        <input type="password" id="pwd"
+                               pattern="^[A-Za-z0-9!@#$%^*]{8,}$" name="pwd" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" id="submit" value="Register" class="sub-button" />
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+    </div>
+</body>
+</html>
